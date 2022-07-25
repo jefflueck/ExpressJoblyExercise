@@ -86,6 +86,42 @@ describe('findAll', function () {
       },
     ]);
   });
+  test('works: filter by title', async function () {
+    let companies = await Company.findAll({ title: 'C2' });
+    expect(companies).toEqual([
+      {
+        handle: 'c2',
+        name: 'C2',
+        description: 'Desc2',
+        numEmployees: 2,
+        logoUrl: 'http://c2.img',
+      },
+    ]);
+  });
+  test('works: filter by minSalary', async function () {
+    let companies = await Company.findAll({ minSalary: 2 });
+    expect(companies).toEqual([
+      {
+        handle: 'c2',
+        name: 'C2',
+        description: 'Desc2',
+        numEmployees: 2,
+        logoUrl: 'http://c2.img',
+      },
+    ]);
+  });
+  test('works: filter by hasEquity', async function () {
+    let companies = await Company.findAll({ hasEquity: true });
+    expect(companies).toEqual([
+      {
+        handle: 'c3',
+        name: 'C3',
+        description: 'Desc3',
+        numEmployees: 3,
+        logoUrl: 'http://c3.img',
+      },
+    ]);
+  });
 });
 
 /************************************** get */
