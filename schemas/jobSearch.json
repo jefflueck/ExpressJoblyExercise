@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "$id": "http://our.company.com/jobSearch.schema.json",
+  "type": "object",
+  "default": {},
+  "title": "Job Search Schema",
+  "properties": {
+    "title": {
+      "type": "string",
+      "default": "",
+      "title": "The title Schema",
+      "examples": ["some new title"]
+    },
+    "minSalary": {
+      "type": "integer",
+      "default": 0,
+      "title": "The minSalary Schema",
+      "examples": [100000]
+    },
+    "hasEquity": {
+      "type": "boolean",
+      "default": false,
+      "title": "The hasEquity Schema",
+      "examples": [true]
+    }
+  },
+  "examples": [
+    {
+      "title": "some new title",
+      "minSalary": 100000,
+      "hasEquity": true
+    }
+  ]
+}

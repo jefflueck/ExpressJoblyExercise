@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "$id": "http://our.company.com/jobUpdate.schema.json",
+  "type": "object",
+  "default": {},
+  "title": "Job Schema",
+  "required": ["title", "company_handle"],
+  "properties": {
+    "title": {
+      "type": "string",
+      "default": "",
+      "title": "The title Schema",
+      "examples": ["some company name"]
+    },
+    "salary": {
+      "type": "integer",
+      "default": 0,
+      "title": "The salary Schema",
+      "examples": [111000]
+    },
+    "equity": {
+      "type": "integer",
+      "default": 0,
+      "title": "The equity Schema",
+      "examples": [0]
+    },
+    "company_handle": {
+      "type": "string",
+      "default": "",
+      "title": "The company_handle Schema",
+      "examples": ["some_company"]
+    }
+  },
+  "examples": [
+    {
+      "title": "some company name",
+      "salary": 111000,
+      "equity": 0,
+      "company_handle": "some_company"
+    }
+  ]
+}
